@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <referenceContainer name="product.info.stock.sku">
+        <block class="Magento\Catalog\Block\Product\View\Description" name="product.brand" template="Magento_Catalog::product/view/brand.phtml" after="product.info.sku">
+            <arguments>
+                <argument name="at_call" xsi:type="string">getSampleAtrribute</argument>
+                <argument name="at_code" xsi:type="string">sample_attribute</argument>
+                <argument name="css_class" xsi:type="string">sample_attribute</argument>
+                <argument name="at_label" xsi:type="string">SampleAtrribute</argument>
+                <argument name="add_attribute" xsi:type="string">itemprop="sample_attribute"</argument>
+            </arguments>
+        </block>
+    </referenceContainer>
+</page>
