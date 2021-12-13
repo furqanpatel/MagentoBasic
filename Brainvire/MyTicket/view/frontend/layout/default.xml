@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">-->
+<!--    <body>-->
+<!--        <referenceBlock name="top.links">-->
+<!--            <block class="\Brainvire\MyTicke\Block\Link" name="your-link-top">-->
+<!--                <arguments>-->
+<!--                    <argument name="label" xsi:type="string" translate="true">Custom Link</argument>-->
+<!--                    <argument name="path" xsi:type="string" translate="true">custom-path</argument>-->
+<!--                </arguments>-->
+<!--            </block>-->
+<!--        </referenceBlock>-->
+<!--    </body>-->
+<!--</page>-->
+<!--<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">-->
+<!--<body>-->
+<!--    <referenceBlock name="top.links">-->
+<!--        <block class="\Brainvire\MyTicke\Block\Link" name="custom-link" after="my-account-link"/>-->
+<!--    </referenceBlock>-->
+<!--</body>-->
+<!--</page>-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="top.links">
+            <block class="Brainvire\MyTicket\Block\Link" name="custom-link" after="my-account-link"  template="Brainvire_MyTicket::link.phtml"/>
+        </referenceBlock>
+    </body>
+</page>

@@ -1,0 +1,88 @@
+<form class="form customform"
+      action="<?php echo $block->getBaseUrl().'job/job/save'; ?>"
+      id="magelearn-customform-form"
+      method="post"
+      data-hasrequired="<?= $block->escapeHtmlAttr(__('* Required Fields')) ?>"
+      enctype="multipart/form-data"
+      data-mage-init='{"validation":{}}'>
+
+
+        <div class="field full_name required">
+            <label class="label" for="full_name"><span><?= $block->escapeHtml(__('Full name:')) ?></span></label>
+            <div class="control">
+                <input name="full_name"
+                       id="full_name"
+                       title="<?= $block->escapeHtmlAttr(__('Full Name')) ?>"
+                       class="input-text"
+                       type="text"
+                       data-validate="{required:true}"/>
+            </div>
+        </div>
+
+        <div class="field email_id required">
+            <label class="label" for="email"><span><?= $block->escapeHtml(__('Email')) ?></span></label>
+            <div class="control">
+                <input name="email_id"
+                       id="email_id"
+                       title="<?= $block->escapeHtmlAttr(__('Email')) ?>"
+                       class="input-text"
+                       type="email"
+                       data-validate="{required:true, 'validate-email':true}"/>
+            </div>
+        </div>
+        <div class="field contact required">
+            <label class="label" for="contact"><span><?= $block->escapeHtml(__('Phone:')) ?></span></label>
+            <div class="control">
+                <input name="contact" id="contact" title="<?= $block->escapeHtmlAttr(__('Phone')) ?>" class="input-text" type="text" data-validate="{required:true, 'validate-number':true}">
+            </div>
+        </div>
+    <div class="field apply_for_job_title required">
+        <label class="label" for="apply_for_job_title"><span><?= $block->escapeHtml(__('apply for job title:')) ?></span></label>
+        <div class="control">
+            <input name="apply_for_job_title"
+                   id="apply_for_job_title"
+                   title="<?= $block->escapeHtmlAttr(__('apply for job title')) ?>"
+                   class="input-text"
+                   type="text"
+                   data-validate="{required:true}"/>
+        </div>
+    </div>
+    <div class="field resume required">
+        <label class="label" for="resume"><span><?= $block->escapeHtml(__('resume')) ?></span></label>
+        <div class="control">
+            <input name="resume"
+                   id="resume"
+                   title="<?= $block->escapeHtmlAttr(__('resume')) ?>"
+                   class="input-text"
+                   type="file"
+                   data-validate="{required:true}"/>
+        </div>
+    </div>
+<!--    <div class="field resume">-->
+<!--        <label class="label" for="resume"><span>--><?//= $block->escapeHtml(__('Resume:')) ?><!--</span></label>-->
+<!--        <div class="control">-->
+<!--            <input name="resume"-->
+<!--                   id="resume"-->
+<!--                   accept="resume/*"-->
+<!--                   accept=".pdf"-->
+<!--                   title="--><?//= $block->escapeHtmlAttr(__('Resume')) ?><!--"-->
+<!--                   class="input-text"-->
+<!--                   type="file" />-->
+<!--        </div>-->
+<!--    </div>-->
+        <div class="field comments required">
+            <label class="label" for="comments"><span><?= $block->escapeHtml(__('Comments:')) ?></span></label>
+            <div class="control">
+                <textarea name="comments" id="comments" title="<?= $block->escapeHtml(__('Comments')) ?>" class="input-text" cols="5" rows="3" data-validate="{required:true}"></textarea>
+            </div>
+        </div>
+
+
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" title="<?= $block->escapeHtmlAttr(__('Submit')) ?>" class="action submit primary">
+                <span><?= $block->escapeHtml(__('Submit')) ?></span>
+            </button>
+        </div>
+    </div>
+</form>

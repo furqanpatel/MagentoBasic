@@ -1,0 +1,21 @@
+<?php /** @var Brainvire\Careers\Block\Frontend\Job\JobData $block */ ?>
+<?php $jobCollection = $block->getJobCollection(); ?>
+<?php if (count($jobCollection)) { ?>
+    <h2><?= $block->escapeHtml(__('Job List')) ?></h2>
+    <?php foreach($block->getJobCollection() as $post): ?>
+        <h3><?= $block->escapeHtml(__('Job Title - ')) ?>
+           <?php echo $post->getJobTitle(); ?>
+        </h3>
+        <h6>job posted on<?php echo date('F j, Y', strtotime($post->getJobPostedOn())); ?></h6>
+        <p><b>Skill Required:-</b><?php echo $post->getSkillRequired(); ?></p>
+        <p><b>Job Description:-</b><br/><?php echo $post->getJobDescription(); ?></p>
+        <h6>job expire on<?php echo date('F j, Y', strtotime($post->getJobExpiresOn())); ?></h6>
+        <p>
+            <?php $id = ($post->getJobId()) ? $post->getJobId() : $post['job_id']; ?>
+            <a href="<?php echo $block->getBaseUrl().'job/job/apply'; ?>" class="action view">
+                <span>Apply</span>
+            </a>
+        </p>
+    <hr>
+    <?php endforeach; ?>
+<?php } ?>

@@ -1,0 +1,31 @@
+{
+    "jobs": {
+        "column": {
+            "job_id": true,
+            "job_title": true,
+            "skill_required": true,
+            "job_posted_on": true,
+            "job_expires_on": true,
+            "job_description": true,
+            "is_active": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "application": {
+        "column": {
+            "app_id": true,
+            "full_name": true,
+            "email_id": true,
+            "comments": true,
+            "resume": true,
+            "resumess": true,
+            "contact": true,
+            "apply_for_job_title": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

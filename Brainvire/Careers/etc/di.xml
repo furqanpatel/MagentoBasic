@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Brainvire\Careers\Api\Data\JobInterface" type="Brainvire\Careers\Model\Job" />
+    <preference for="Brainvire\Careers\Api\Data\FormInterface" type="Brainvire\Careers\Model\Form" />
+    <preference for="Brainvire\Careers\Api\CustomInterface" type="Brainvire\Careers\Model\Job" />
+    <virtualType name="Brainvire\Careers\Model\ResourceModel\Job\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">jobs</argument>
+            <argument name="resourceModel" xsi:type="string">Brainvire\Careers\Model\ResourceModel\Job</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="job_record_job_list_data_source" xsi:type="string">Brainvire\Careers\Model\ResourceModel\Job\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <virtualType name="Brainvire\Careers\Model\ResourceModel\Form\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">application</argument>
+            <argument name="resourceModel" xsi:type="string">Brainvire\Careers\Model\ResourceModel\Form</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="job_form_apply_list_data_source" xsi:type="string">Brainvire\Careers\Model\ResourceModel\Form\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+<!--    <type name="Magento\Cms\Model\Wysiwyg\Images\Storage">-->
+<!--        <arguments>-->
+<!--            <argument name="extensions" xsi:type="array">-->
+<!--                <item name="allowed" xsi:type="array">-->
+<!--                    <item name="pdf" xsi:type="number">1</item>-->
+<!--                </item>-->
+<!--            </argument>-->
+<!--        </arguments>-->
+<!--    </type>-->
+<!--    <preference for="Magento\Cms\Model\Wysiwyg\Images\Storage" type="Brainvire\Careers\Model\Cms\Wysiwyg\Images\Storage" />-->
+<!--    <virtualType name="Magelearn\Customform\CustomformImageUpload" type="Magelearn\Customform\Model\ImageUploader">-->
+<!--        <arguments>-->
+<!--            <argument name="baseTmpPath" xsi:type="string">magelearn/customform/tmp</argument>-->
+<!--            <argument name="basePath" xsi:type="string">magelearn/customform</argument>-->
+<!--            <argument name="allowedExtensions" xsi:type="array">-->
+<!--                <item name="jpg" xsi:type="string">jpg</item>-->
+<!--                <item name="jpeg" xsi:type="string">jpeg</item>-->
+<!--                <item name="gif" xsi:type="string">gif</item>-->
+<!--                <item name="png" xsi:type="string">png</item>-->
+<!--            </argument>-->
+<!--        </arguments>-->
+<!--    </virtualType>-->
+<!--    <type name="Magelearn\Customform\Controller\Adminhtml\Customform\FileUploader\Save">-->
+<!--        <arguments>-->
+<!--            <argument name="imageUploader" xsi:type="object">Magelearn\Customform\CustomformImageUpload</argument>-->
+<!--        </arguments>-->
+<!--    </type>-->
+</config>

@@ -1,0 +1,33 @@
+<?php
+$singleData = $block->getSingleData();
+?>
+<div class="fieldset-wrapper customer-information">
+    <div class="fieldset-wrapper-title">
+        <span class="title">Applicant Information</span>
+    </div>
+    <table class="admin__table-secondary" style="width: 600px">
+        <tbody>
+        <tr>
+            <th>Full Name:-</th>
+            <td><?php echo $singleData->getFullName(); ?></td>
+        </tr>
+        <tr>
+            <th>Contact:-</th>
+            <td><?php echo $singleData->getContact(); ?></td>
+        </tr>
+        <tr>
+            <th>Email ID:-</th>
+            <td><?php echo $singleData->getEmail(); ?></td>
+        </tr>
+        <tr>
+            <th>Comments:-</th>
+            <td><?php echo $singleData->getComment(); ?></td>
+        </tr>
+        <tr>
+            <th>Apply For Job:-</th>
+            <td><?php echo $singleData->getApplyForJob(); ?></td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>

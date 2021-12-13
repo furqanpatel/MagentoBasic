@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Brainvire_Careers::job_data" title="Brainvire " translate="title" module="Brainvire_Careers"
+             sortOrder="10" resource="Brainvire_Careers::job_data" />
+        <add id="Brainvire_Careers::add_row" title="Careers" translate="title" module="Brainvire_Careers"
+             sortOrder="20" parent="Brainvire_Careers::job_data" action="job/job/index"
+             resource="Brainvire_Careers::add_row" />
+        <add id="Brainvire_Careers::add_rows" title="Applications" translate="title" module="Brainvire_Careers"
+             sortOrder="30" parent="Brainvire_Careers::job_data" action="job/form/index"
+             resource="Brainvire_Careers::add_rows" />
+    </menu>
+</config>

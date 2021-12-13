@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="jobs" resource="default" engine="innodb" comment="Jobs Details">
+        <column xsi:type="smallint" name="job_id" unsigned="false" nullable="false" identity="true"
+                comment="Entity ID"/>
+        <column xsi:type="varchar" name="job_title" nullable="false" length="255" comment="Job Title"/>
+        <column xsi:type="varchar" name="skill_required" nullable="false" length="255" comment="Required Skills"/>
+        <column xsi:type="timestamp" name="job_posted_on"  nullable="false" default="CURRENT_TIMESTAMP" comment="Job Posted Time"/>
+        <column xsi:type="timestamp" name="job_expires_on"  nullable="false" default="CURRENT_TIMESTAMP" comment="Job expire Time"/>
+        <column xsi:type="text" name="job_description" nullable="true" comment="Description of Job"/>
+        <column xsi:type="smallint" name="is_active" unsigned="false" nullable="false" identity="false"
+                default="1" comment="Is Job Active"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="job_id"/>
+        </constraint>
+    </table>
+
+    <table name="application" resource="default" engine="innodb" comment="Jobs Details">
+        <column xsi:type="smallint" name="app_id" unsigned="false" nullable="false" identity="true"
+                comment="Entity ID"/>
+        <column xsi:type="varchar" name="full_name" nullable="false" length="255" comment="Full Name"/>
+        <column xsi:type="varchar" name="email_id" nullable="false" length="255" comment="Email ID"/>
+        <column xsi:type="text" name="comments" nullable="true" comment="Comments"/>
+        <column xsi:type="varchar" name="resume" nullable="false" length="255" comment="Resume"/>
+        <column xsi:type="varchar" name="contact" nullable="true" comment="Contact No"/>
+        <column xsi:type="varchar" name="apply_for_job_title" nullable="true" comment="Applying For Job Title"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="app_id"/>
+        </constraint>
+    </table>
+</schema>

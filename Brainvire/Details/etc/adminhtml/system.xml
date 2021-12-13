@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="brainvire" translate="label" sortOrder="10">
+            <label>Brainvire</label>
+        </tab>
+        <section id="details" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Details under Stores</label>
+            <tab>brainvire</tab>
+            <resource>Brainvire_Details::details_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Configuration</label>
+                <field id="title" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Title</label>
+                    <comment>Enter the name or title.</comment>
+                </field>
+                <field id="email" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Email Id</label>
+                    <comment>Enter the email id</comment>
+                </field>
+                <field id="phone" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Phone No</label>
+                    <comment>Enter the phone no</comment>
+                </field>
+                <field id="address" translate="label" type="textarea" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Address</label>
+                    <comment>Enter the Address</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
